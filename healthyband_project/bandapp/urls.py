@@ -14,6 +14,8 @@ urlpatterns = [
 
 # https://2421d8dd-7f48-42df-a3ff-fcf3762b1b67-00-1xu9mw62re307.worf.replit.dev/sensor_data/?user_name=atharva&api_key=qx3w49r3-kifh-ix9z-04lr-mz1y4bpl8rer&heartPulse=95&dhtTemp=31&dhtHum=79&gyroX=60&gyroY=89&gyroZ=45&acceleroX=60&acceleroY=89&acceleroZ=45
 
+# https://2421d8dd-7f48-42df-a3ff-fcf3762b1b67-00-1xu9mw62re307.worf.replit.dev/sensor_data/?user_name=atharva&api_key=qx3w49r3-kifh-ix9z-04lr-mz1y4bpl8rer&heartPulse=qx3w49r3-kifh-ix9z-04lr-mz1y4bpl8rer&dhtTemp=24&dhtHum=40&gyroX=0.00&gyroY=0.00&gyroZ=0.00&acceleroX=0.00&acceleroY=0.00&acceleroZ=9.81
+
     path('sensor_data/', views.sensor_data, name='sensor_data'),
 
 # http://127.0.0.1:8000/sensor_latest_data/?user_name=atharva&api_key=qx3w49r3-kifh-ix9z-04lr-mz1y4bpl8rer
