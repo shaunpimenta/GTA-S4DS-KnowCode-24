@@ -10,6 +10,7 @@ class SensorData(models.Model):
     id = models.AutoField(primary_key=True)
     user_name = models.CharField(max_length=50)
     pub_date = models.DateField()
+    pub_time = models.CharField(max_length=10, default="")
 
 
     heartPulse = models.IntegerField(default=0)
@@ -29,13 +30,21 @@ class SensorData(models.Model):
 
 
 
+    def __str__(self):
+        return f'{self.id}- {self.user_name} {self.pub_date} - heartPulse : {self.heartPulse}'
+
+
+
+class UserData(models.Model):
+    id = models.AutoField(primary_key=True)
+    user_name = models.CharField(max_length=50)
+    api_key = models.CharField(max_length=200)
+    
+    pub_date = models.DateField()
+
 
     def __str__(self):
-        return f'{id}- {self.user_name} {self.pub_date}'
-
-
-
-
+        return f'{self.id}- {self.user_name} {self.pub_date}'
 
 
 

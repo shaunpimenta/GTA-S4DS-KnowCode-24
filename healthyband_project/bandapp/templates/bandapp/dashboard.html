@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 600 seconds = 10 minutes -->
+    <meta http-equiv="refresh" content="20" />
     
     {% load static %}
 
@@ -12,7 +15,7 @@
     <link rel="stylesheet" href="{% static 'bandapp\setup\Chart.min.css' %}" />
 
 
-    <title>Securix | Dashboard</title>
+    <title>HealthyBand | Dashboard</title>
 </head>
 <body class="font-mono">
 
@@ -26,7 +29,7 @@
 
             <a href="#" class="text-2xl text-blue-700 font-bold py-3 pl-4 grid grid-cols-3">
                 <i class="fa-solid fa-shield pt-1 text-right mr-2"></i>
-                <div class="col-span-2 text-left ">Securix</div>
+                <div class="col-span-2 text-left ">HealthyBand</div>
             </a>
 
             <div></div>
@@ -65,43 +68,14 @@
     <!-- Search -->
     <div class="mt-20"></div>
 
-    
-    <div>
-        
-        <!-- Add Repo link Starts -->
-        <form method="POST" onsubmit="showLoading()">
-            
-            <div class="flex justify-center">
-                <div class="p-6 border border-blue-100 rounded-xl bg-gradient-to-r from-[#f0fdfa] to-blue-100 rounded-xl shadow-xl w-5/6">
-                    <!-- <label class="border px-2 py-1" for="repo_link">Enter GitHub Repository URL:</label> -->
-                    <div class="flex justify-center">
-                        <div class="w-5/6">
-                            <input class=" px-2 py-2 w-4/6 rounded-md border border-[#7c3aed] hover:shadow-xl no-outline bg-[#f0fdfa]" type="text" name="repo_link" id="repo_link" placeholder="enter github repo link" required>
-                            <input class="border border-[#7c3aed] text-xl rounded hover:shadow-xl uppercase px-4 py-2 hover:font-bold" type="submit" value="Scan Repository">
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-        </form>
-
-        <div class="text-2xl text-center my-4">OR</div>
-
-        <!-- Add Files Starts -->
-        <div class="mx-20 text-center">
-            
-            
-
-          </div>
-
-    </div>
 
 
     <!-- Scan List -->
     
         
         <div class="px-20 mt-10">
-            <div class="py-10 text-center text-2xl font-bold col-span-2">File Scan History of {{ request.user.username | title }}</div>
+            <div class="py-10 text-center text-2xl font-bold col-span-2">Band History of {{ request.user.username | title }}</div>
             
             <section id="tableSection">
                 <!-- <div class="text-center font-bold text-xl">Table</div> -->
@@ -114,30 +88,37 @@
                           <thead class="border-b font-medium">
                             <tr>
                               <th scope="col" class="px-6 py-4">#</th>
-                              <th scope="col" class="px-6 py-4 text-center">File Name</th>
-                              <th scope="col" class="px-6 py-4 text-center">Github Link</th>
-                              <th scope="col" class="px-6 py-4 text-center">Total Findings</th>
-                              <th scope="col" class="px-6 py-4 text-center">High</th>
-                              <th scope="col" class="px-6 py-4 text-center">Medium</th>
-                              <th scope="col" class="px-6 py-4 text-center">Low</th>
-                              <th scope="col" class="px-6 py-4 text-center">URL</th>
+                              <th scope="col" class="px-6 py-4 text-center">pub_date</th>
+                              <th scope="col" class="px-6 py-4 text-center"><i class="fa-solid fa-heart-pulse mr-2"></i>Heart Pulse</th>
+                              <th scope="col" class="px-6 py-4 text-center"><i class="fa-solid fa-temperature-low mr-2"></i>Temperature</th>
+                              <th scope="col" class="px-6 py-4 text-center"><i class="fa-solid fa-droplet mr-2"></i>Humidity</th>
+                              <th scope="col" class="px-6 py-4 text-center">Gyro X</th>
+                              <th scope="col" class="px-6 py-4 text-center">Gyro Y</th>
+                              <th scope="col" class="px-6 py-4 text-center">Gyro Z</th>
+                              <th scope="col" class="px-6 py-4 text-center">Accelero X</th>
+                              <th scope="col" class="px-6 py-4 text-center">Accelero Y</th>
+                              <th scope="col" class="px-6 py-4 text-center">Accelero Z</th>
                             </tr>
                           </thead>
                           <tbody>
-                            {% for finding in security_findings %}
+                            {% for sensordata in userSensorData %}
                                 <tr class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 border-neutral-500 hover:bg-neutral-200">
                                     <td class="whitespace-nowrap px-6 py-4 font-medium">{{ forloop.counter }}</td>
-                                    <td class="whitespace-nowrap px-6 py-4 text-center">{{ finding.file_name }}</td>
-                                    <td class="whitespace-nowrap px-6 py-4 text-center">{{ finding.github_link }}</td>
-                                    <td class="whitespace-nowrap px-6 py-4 text-center">{{ finding.total_findings }}</td>
-                                    <td class="whitespace-nowrap px-6 py-4 text-center">{{ finding.high_severity_findings }}</td>
-                                    <td class="whitespace-nowrap px-6 py-4 text-center">{{ finding.medium_severity_findings }}</td>
-                                    <td class="whitespace-nowrap px-6 py-4 text-center">{{ finding.low_severity_findings }}</td>
-                                    <td class="whitespace-nowrap px-6 py-4 text-center hover:text-blue-600">
-                                        <a href="/showresult/{{ finding.id }}" target="_blank" rel="noopener noreferrer">
+                                    <td class="whitespace-nowrap px-6 py-4 text-center">{{ sensordata.pub_date }}</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-center">{{ sensordata.heartPulse }}</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-center">{{ sensordata.dhtTemp }}</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-center">{{ sensordata.dhtHum }}</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-center">{{ sensordata.gyroX }}</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-center">{{ sensordata.gyroY }}</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-center">{{ sensordata.gyroZ }}</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-center">{{ sensordata.acceleroX }}</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-center">{{ sensordata.acceleroY }}</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-center">{{ sensordata.acceleroZ }}</td>
+                                    <!-- <td class="whitespace-nowrap px-6 py-4 text-center hover:text-blue-600">
+                                        <a href="/showresult/{{ sensordata.id }}" target="_blank" rel="noopener noreferrer">
                                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                         </a>
-                                    </td>
+                                    </td> -->
                                 </tr>
                             {% endfor %}
                         </tbody>

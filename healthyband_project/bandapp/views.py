@@ -1,7 +1,7 @@
 #  i have created this file - GTA
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
-from .models import SensorData
+from .models import SensorData, UserData
 import random
 import os
 import requests
@@ -46,13 +46,53 @@ def dashboard(request):
     logedIn_user = request.user.username
     
     # Query the database to get all records for the logged-in user
-    # security_findings = SecurityFinding.objects.filter(user_name=logedIn_user)
+    userData = SensorData.objects.filter(user_name=logedIn_user)
 
     # Pass the data to the template
-    context = {'security_findings': "se"}
+    context = {'userSensorData': userData}
     
     # Render the template with the data
     return render(request, 'bandapp/dashboard.html', context)
+
+# API : sensor_latest_data 
+# @csrf_exempt
+def sensor_latest_data(request):
+    if request.method == 'GET':
+        # Get parameters from the GET request
+        _user_name = request.GET.get('user_name', '')
+        _api_key = request.GET.get('api_key', '')
+
+        # Validate the username, API key, and nodename
+        user_node_data = UserData.objects.filter(user_name=_user_name, api_key=_api_key).first()
+
+        if user_node_data:
+            latest_sensor_data = SensorData.objects.filter(user_name=_user_name).order_by('-pub_date', '-pub_time').first()
+
+            if latest_sensor_data:
+                # Serialize the data into a dictionary
+                serialized_data = {
+                    'user_name': latest_sensor_data.user_name,
+                    'pub_date': latest_sensor_data.pub_date,
+                    'pub_time': latest_sensor_data.pub_time,
+                    'heartPulse': latest_sensor_data.heartPulse,
+                    'dhtTemp': latest_sensor_data.dhtTemp,
+                    'dhtHum': latest_sensor_data.dhtHum,
+                    'gyrometer': [latest_sensor_data.gyroX, latest_sensor_data.gyroY, latest_sensor_data.gyroZ],
+                    
+                    'accelerometer': [latest_sensor_data.acceleroX, latest_sensor_data.acceleroY, latest_sensor_data.acceleroZ]
+                }
+                return JsonResponse(serialized_data)
+            
+            else:
+                return JsonResponse({'error': 'No data found for the specified user_name'}, status=404)        
+
+
+            # return JsonResponse({'status': 'success'})
+        
+        else:
+            return JsonResponse({'status': 'error', 'message': 'Invalid username or API key'})
+
+
 
 # @csrf_exempt
 def sensor_data(request):
@@ -60,7 +100,7 @@ def sensor_data(request):
         # Get parameters from the GET request
         _user_name = request.GET.get('user_name', '')
 
-        _api_key = request.GET.get('_api_key', '')
+        _api_key = request.GET.get('api_key', '')
 
         _heartPulse = float(request.GET.get('heartPulse', None))
         _dhtTemp = float(request.GET.get('dhtTemp', None))
@@ -77,12 +117,12 @@ def sensor_data(request):
         dataandtime = timezone.now()
 
         # current_date = dataandtime.date()
-        # current_time = dataandtime.strftime('%H:%M:%S')
+        current_time = dataandtime.strftime('%H:%M:%S')
 
 
 
         # Validate the username, API key, and nodename
-        user_node_data = User.objects.filter(user_name=_user_name, api_key=_api_key).first()
+        user_node_data = UserData.objects.filter(user_name=_user_name, api_key=_api_key).first()
 
         if user_node_data:
             # Save data to the database
@@ -102,6 +142,7 @@ def sensor_data(request):
                 acceleroZ = _acceleroZ,
 
                 pub_date=dataandtime,
+                pub_time=current_time
             )
             sensor_data.save()
 
@@ -283,8 +324,18 @@ def user_register(request):
         
         # Check if the username is unique
         if not User.objects.filter(username=username).exists():
+            dataandtime = timezone.now()
+
             # Create a new user
-            user = User.objects.create_user(username=username, password=password, email=email, api_key=_api_key)
+            user = User.objects.create_user(username=username, password=password, email=email)
+
+            sensor_data = UserData(
+                user_name=username,
+                pub_date=dataandtime,
+                api_key=_api_key
+            )
+            sensor_data.save()
+            
             return redirect('user_login')  # Redirect to your login view
         else:
             error_message = 'Username already exists'
@@ -326,7 +377,7 @@ def generate_unique_api_key():
     while True:
         # api_key = str(uuid.uuid4())
         api_key = str(generate_api_key())
-        if not User.objects.filter(api_key=api_key).exists():
+        if not UserData.objects.filter(api_key=api_key).exists():
             return api_key
 
 
