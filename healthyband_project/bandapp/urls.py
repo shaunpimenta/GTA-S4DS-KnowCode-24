@@ -12,10 +12,13 @@ urlpatterns = [
 
 # http://127.0.0.1:8000/sensor_data/?user_name=atharva&api_key=qx3w49r3-kifh-ix9z-04lr-mz1y4bpl8rer&heartPulse=95&dhtTemp=31&dhtHum=79&gyroX=60&gyroY=89&gyroZ=45&acceleroX=60&acceleroY=89&acceleroZ=45
 
+# https://2421d8dd-7f48-42df-a3ff-fcf3762b1b67-00-1xu9mw62re307.worf.replit.dev/sensor_data/?user_name=atharva&api_key=qx3w49r3-kifh-ix9z-04lr-mz1y4bpl8rer&heartPulse=95&dhtTemp=31&dhtHum=79&gyroX=60&gyroY=89&gyroZ=45&acceleroX=60&acceleroY=89&acceleroZ=45
+
     path('sensor_data/', views.sensor_data, name='sensor_data'),
 
 # http://127.0.0.1:8000/sensor_latest_data/?user_name=atharva&api_key=qx3w49r3-kifh-ix9z-04lr-mz1y4bpl8rer
-
+# https://2421d8dd-7f48-42df-a3ff-fcf3762b1b67-00-1xu9mw62re307.worf.replit.dev/sensor_latest_data/?user_name=atharva&api_key=qx3w49r3-kifh-ix9z-04lr-mz1y4bpl8rer
+# 
     path('sensor_latest_data/', views.sensor_latest_data, name='sensor_latest_data'),
 
     # path("upload_file/", views.upload_file, name="upload_file"),

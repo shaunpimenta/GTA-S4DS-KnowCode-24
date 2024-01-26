@@ -125,5 +125,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_MEDIA_URL = '/securixapp/'
-STATIC_MEDIA_ROOT = os.path.join(BASE_DIR, 'securixapp')
+STATIC_MEDIA_URL = '/bandapp/'
+STATIC_MEDIA_ROOT = os.path.join(BASE_DIR, 'bandapp')
