@@ -38,6 +38,11 @@ its actions:
 
 
 # At Project Day:
+Smart Band Analysis and research.jpeg
+
+### Smart Band Analysis & Research
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/sensorData%20website%20welcome%20page.jpeg" alt="Image 1" height="250">
+
 
 ### Rough Idea:
 
