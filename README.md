@@ -43,22 +43,56 @@ its actions:
 
 - Our fitness band prototype is not just a step tracker; it's a health companion.
 
-## Future Scope
+- Smartphone
+
+
+## Features:
+
+## Future Scope:
+- Stress Level Measurement 
+- Sleep Tracking
+- Make an Robust Application
+- and to help you manage the demands of daily life.
+
 Advanced Biometric Monitoring:
+
 	- Real-time heart rate monitoring to gauge your cardiovascular health.
-	- Stress Level Measurement and Sleep Tracking to help you manage the demands of daily life.
+
 
 Smart Activity Recognition:
+
 	- Automatic detection and categorization of various activities, from running and cycling to yoga and weightlifting.
+
 Personalized Health Insights:
+
 	- Tailored recommendations based on your activity levels, sleep patterns, and overall health metrics.
 
 # Output:
 
 
 
-# Sofware Section
-<img src="https://github.com/AtharvaPawar456/HandMadeProjects/blob/main/static/project_img/software-section.png" alt="Image 1" height="250">
+### Our Logo
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="100">
+
+### Band SensorData Web-App - Welcome Page
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/sensorData%20website%20welcome%20page.jpeg" alt="Image 1" height="250">
+
+
+### Band SensorData Web-App - Data Logs Page
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/SensorData-logs.jpeg" alt="Image 1" height="250">
+
+
+### Band SensorData Web-App - Get Latest Sensor Data Api
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
+
+### Band SensorData Web-App - Hand Band Simulation
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
+
+### Band SensorData Web-App - Welcome Page
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
+
+### Band SensorData Web-App - Welcome Page
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
 
 
 
