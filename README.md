@@ -2,7 +2,7 @@
 Team : GTA , Project : HealthyBand  - S4DS-KnowCode Hackathon : kjsieit College
 
 
-# Idea is Product name : HealthyBand
+# Idea of Product : HealthyBand
 
 its wearable, light weight and less costly... 
 
@@ -32,14 +32,57 @@ its actions:
 - remote patient monitoring
 - every data will be stored on server in encrypted form and can be visiable on iteractive dashboard for real time insights 
 - make some prediction on the data collected and giving recommendation on it or any prediction on it.
--This information can be made avaliable to doctors and medical institutes if the user consensts for diagnosis and or research purposes
+- this information can be made avaliable to doctors and medical institutes if the user consensts for diagnosis and or research purposes
+
+
+## About Our Project:
+
+- Our team has dedicated to developing a fitness band that goes beyond the conventional, seamlessly integrating advanced technology to empower you on your fitness journey.
+
+- This prototype represents the culmination of innovation, precision engineering, and a deep understanding of the diverse needs of individuals striving for a healthier lifestyle.
+
+- Our fitness band prototype is not just a step tracker; it's a health companion.
+
+## Future Scope
+Advanced Biometric Monitoring:
+	- Real-time heart rate monitoring to gauge your cardiovascular health.
+	- Stress Level Measurement and Sleep Tracking to help you manage the demands of daily life.
+
+Smart Activity Recognition:
+	- Automatic detection and categorization of various activities, from running and cycling to yoga and weightlifting.
+Personalized Health Insights:
+	- Tailored recommendations based on your activity levels, sleep patterns, and overall health metrics.
+
+# Output:
+
+
+
+# Sofware Section
+<img src="https://github.com/AtharvaPawar456/HandMadeProjects/blob/main/static/project_img/software-section.png" alt="Image 1" height="250">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 # Task Distribution:
-
-
 
 ### Shaun Part: (rank this tasks according to revelence)
 - find best and low compute(moderate) encrypt algo for hardware(ESP32)
@@ -97,37 +140,3 @@ also save the inference code for the same saved model (Load, test, predict)
 - Product Designing:
 	- build a proto-type case for the HealthyBand
 
-
-
-# Need to Carry Things:
-
-### General Things:
-- Toothbrush, toothpaste, and any other personal hygiene items
-- water bottle
-- some food (snacks)
-- cloths : jacket, etc
-- 1 book , 1 pen, 1 pencil
-- College Id, Addhar Card
-- Personal Medications...
-- Project Branding Materials: If applicable, bring logos, banners, or any other materials that represent your project.
-
-
-### Tech Things:
-- Laptop + Charger
-- headphone / headset
-- mobile charger, extention board, Mic
-
-
-### Project Items:
-- ESP32
-- Oled
-- Heart Rate Sensor
-- Li-ion Battery + Charger Chip
-- lipo battery
-- 3 Push to ON button
-- 3 leds : red, green, blue
-- MPU6050
-- CardBoard, Super Glue, cotton, 
-- Dotted PCB, Rainbow wires, soldering Machine, melting wire, tool kit
-- band structur of cloth etc
-- slide switch ON/OFF
