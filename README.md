@@ -127,6 +127,12 @@ its actions:
 ### Band SensorData Web-App - Hand Band Simulation :: link : https://wokwi.com/projects/387899744400957441
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/band%20simulation-wokwi.jpeg" alt="Image 1" height="250">
 
+### Band SensorData Web-App - Hand Band Hardware Implemented 
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/hardware%20implemented.jpeg" alt="Image 1" height="250">
+
+### Band SensorData Web-App - Hand Band Hardware Implemented - working mode
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/hardware%20implemented%20-%20working%20mode.jpeg" alt="Image 1" height="250">
+
 
 
 
