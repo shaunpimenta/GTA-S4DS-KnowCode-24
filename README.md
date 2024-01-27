@@ -133,12 +133,21 @@ its actions:
 ### Band SensorData Web-App - Hand Band Hardware Implemented - working mode
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/hardware%20implemented%20-%20working%20mode.jpeg" alt="Image 1" height="250">
 
+### Band SensorData Web-App - Hand Band Hardware Connection - 1
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/hardware-connection%20(1).jpeg" alt="Image 1" height="250">
+
+### Band SensorData Web-App - Hand Band Hardware Connection - 2
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/hardware-connection%20(2).jpeg" alt="Image 1" height="250">
+
 
 
 
 
 
 ### Band Mobile-App - Dashboard
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/dashboard.jpeg" alt="Image 1" height="250">
+
+### Band Mobile-App - Register
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/dashboard.jpeg" alt="Image 1" height="250">
 
 ### Band Mobile-App - Recommended Product
