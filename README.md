@@ -71,26 +71,27 @@ Personalized Health Insights:
 
 
 
-# Our Logo
+### Our Logo
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="100">
 
-# Band SensorData Web-App - Welcome Page
+### Band SensorData Web-App - Welcome Page
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/sensorData%20website%20welcome%20page.jpeg" alt="Image 1" height="250">
 
 
-# Band SensorData Web-App - Data Logs Page
+### Band SensorData Web-App - Data Logs Page
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/SensorData-logs.jpeg" alt="Image 1" height="250">
 
-# Band SensorData Web-App - Welcome Page
+
+### Band SensorData Web-App - Get Latest Sensor Data Api
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
 
-# Band SensorData Web-App - Welcome Page
+### Band SensorData Web-App - Hand Band Simulation
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
 
-# Band SensorData Web-App - Welcome Page
+### Band SensorData Web-App - Welcome Page
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
 
-# Band SensorData Web-App - Welcome Page
+### Band SensorData Web-App - Welcome Page
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
 
 
