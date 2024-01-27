@@ -143,11 +143,13 @@ its actions:
 
 
 
+### Band Mobile-App - Register
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/band%20app%20-%20register.jpeg" alt="Image 1" height="250">
+
+### Band Mobile-App - Login
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/band%20app%20-%20login.jpeg" alt="Image 1" height="250">
 
 ### Band Mobile-App - Dashboard
-<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/dashboard.jpeg" alt="Image 1" height="250">
-
-### Band Mobile-App - Register
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/dashboard.jpeg" alt="Image 1" height="250">
 
 ### Band Mobile-App - Recommended Product
