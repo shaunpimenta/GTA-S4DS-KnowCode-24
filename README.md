@@ -2,7 +2,9 @@
 Team : GTA , Project : HealthyBand  - S4DS-KnowCode Hackathon : kjsieit College
 
 
-# Idea of Product : HealthyBand
+# Abstract: ( Before Project Day )
+
+## Idea of Product : HealthyBand
 
 its wearable, light weight and less costly... 
 
@@ -35,7 +37,43 @@ its actions:
 - this information can be made avaliable to doctors and medical institutes if the user consensts for diagnosis and or research purposes
 
 
-## About Our Project:
+# At Project Day:
+
+### Rough Idea:
+
+Idea is Product name : HealthyBand
+
+its wearable, light weight and less costly... 
+
+which has sensors like:
+- Heart Pulse Sensor
+- Pulse Oximeter Heart Rate sensor
+- MPU6050 : Gyro Scopic Sensor : for body movement , sleep mode detection, etc
+
+extra hardware:
+- ESP32 : IoT Board
+- Battery Li-ion 3.7V, 2500 mH
+- 3 push to ON buttons
+- Oled : 1.3 Inch , 128x64 Size
+
+for this prototype product we will cover our product for good product interface  
+
+its actions:
+- measure the sensor data then upload on Django Server 
+    (in encrypted form)
+- also does edge computing
+- display the sensor readings on Oled
+- if any health parameter is above threshold level (means in alert range)
+    then make a alert notifiaction to the docter appointed (if that doctor is busy then next doctor which has less schedules and the nearest
+- it gives notification for mediaction which medicine with QTY and time
+- tracking daily activity : (suggest some use of this feature)
+- sleep tracking and sleep time notification
+- remote patient monitoring
+- every data will be stored on server in encrypted form and can be visiable on iteractive dashboard for real time insights 
+- make some prediction on the data collected and giving recommendation on it or any prediction on it.
+
+
+### About Our Project:
 
 - Our team has dedicated to developing a fitness band that goes beyond the conventional, seamlessly integrating advanced technology to empower you on your fitness journey.
 
