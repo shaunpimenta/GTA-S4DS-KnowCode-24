@@ -9,6 +9,9 @@
     
     {% load static %}
 
+    <link rel="icon" type="image/png" href="{% static 'bandapp\setup\images\logo-3.png' %}">
+
+
     <script src="{% static 'bandapp\setup\tailwindcss.js' %}"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <script src="{% static 'bandapp\setup\Chart.min.js' %}" charset="utf-8" ></script>
@@ -28,7 +31,7 @@
         <div class="grid grid-cols-4 border h-16">
 
             <a href="#" class="text-2xl text-blue-700 font-bold py-3 pl-4 grid grid-cols-3">
-                <i class="fa-solid fa-shield pt-1 text-right mr-2"></i>
+                <i class="fa-solid fa-heart-pulse pt-1 text-right mr-2 text-red-600"></i>
                 <div class="col-span-2 text-left ">HealthyBand</div>
             </a>
 
@@ -75,7 +78,7 @@
     
         
         <div class="px-20 mt-10">
-            <div class="py-10 text-center text-2xl font-bold col-span-2">Band History of {{ request.user.username | title }}</div>
+            <div class="py-10 text-center text-2xl font-bold col-span-2">HealthyBand Sensor History of {{ request.user.username | title }}</div>
             
             <section id="tableSection">
                 <!-- <div class="text-center font-bold text-xl">Table</div> -->
@@ -88,7 +91,8 @@
                           <thead class="border-b font-medium">
                             <tr>
                               <th scope="col" class="px-6 py-4">#</th>
-                              <th scope="col" class="px-6 py-4 text-center">pub_date</th>
+                              <th scope="col" class="px-6 py-4 text-center">Pub Date</th>
+                              <th scope="col" class="px-6 py-4 text-center">Pub Time</th>
                               <th scope="col" class="px-6 py-4 text-center"><i class="fa-solid fa-heart-pulse mr-2"></i>Heart Pulse</th>
                               <th scope="col" class="px-6 py-4 text-center"><i class="fa-solid fa-temperature-low mr-2"></i>Temperature</th>
                               <th scope="col" class="px-6 py-4 text-center"><i class="fa-solid fa-droplet mr-2"></i>Humidity</th>
@@ -105,6 +109,7 @@
                                 <tr class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 border-neutral-500 hover:bg-neutral-200">
                                     <td class="whitespace-nowrap px-6 py-4 font-medium">{{ forloop.counter }}</td>
                                     <td class="whitespace-nowrap px-6 py-4 text-center">{{ sensordata.pub_date }}</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-center">{{ sensordata.pub_time }}</td>
                                     <td class="whitespace-nowrap px-6 py-4 text-center">{{ sensordata.heartPulse }}</td>
                                     <td class="whitespace-nowrap px-6 py-4 text-center">{{ sensordata.dhtTemp }}</td>
                                     <td class="whitespace-nowrap px-6 py-4 text-center">{{ sensordata.dhtHum }}</td>
