@@ -131,14 +131,18 @@ its actions:
 
 
 
-### Band Mobile-App - Welcome Page
-<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
 
-### Band Mobile-App - Register Page
-<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
+### Band Mobile-App - Dashboard
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/dashboard.jpeg" alt="Image 1" height="250">
 
-### Band Mobile-App - Login Page
-<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
+### Band Mobile-App - Recommended Product
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/recommended%20product.jpeg" alt="Image 1" height="250">
+
+### Band Mobile-App - Alert Notification
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/alert.jpeg" alt="Image 1" height="250">
+
+### Band Mobile-App - Help Section (SOS)
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/help%20section.jpeg" alt="Image 1" height="250">
 
 
 # EHR Exchange Wall
