@@ -83,7 +83,7 @@ Personalized Health Insights:
 ### Band SensorData Web-App - Get Latest Sensor Data Api
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/get%20latest%20sensor%20data%20api.jpeg" alt="Image 1" height="250">
 
-### Band SensorData Web-App - Hand Band Simulation
+### Band SensorData Web-App - Hand Band Simulation :: link : https://wokwi.com/projects/387899744400957441
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/band%20simulation-wokwi.jpeg" alt="Image 1" height="250">
 
 
