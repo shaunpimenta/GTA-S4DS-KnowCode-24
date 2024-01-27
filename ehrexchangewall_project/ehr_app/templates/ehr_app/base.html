@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    
+    {% load static %}
+
+    <style>{% block css %} {% endblock %}</style>
+
+    <title>{% block title %}{% endblock %}</title>
+
+    
+    <link rel="icon" type="image/png" href="{% static 'ehr_app\ehr-logo.png' %}">
+
+    <style>
+        .body-container {
+            height: 27rem;
+            overflow-y: auto;
+            scrollbar-width: thin; /* Firefox */
+            scrollbar-color: #656161 #686464; /* Firefox */
+    
+            /* Webkit (Chrome, Safari) */
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+    
+            &::-webkit-scrollbar-thumb {
+                background-color: #555353;
+            }
+    
+            &::-webkit-scrollbar-track {
+                background-color: #f0f0f0;
+            }
+        }
+
+        .card-container {
+            height: 6rem;
+            overflow-y: auto;
+            scrollbar-width: thin; /* Firefox */
+            scrollbar-color: #656161 #686464; /* Firefox */
+
+            /* Webkit (Chrome, Safari) */
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #555353;
+                border-radius: 5px; /* Rounded corners for Webkit browsers */
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: #f0f0f0;
+                border-radius: 5px; /* Rounded corners for Webkit browsers */
+            }
+        }
+
+    </style>
+
+    <title>EHR Exchange Wall</title>
+</head>
+<body class="body-container font-mono">
+    <!-- Navbar - fixed -->
+    <section class="font-mono z-50">
+        <nav class="fixed z-50 bg-white top-0 left-0 w-full py-2 px-4 flex items-center justify-between border shadow-md">
+            <!-- Brand Logo and Name on the Left -->
+            <a class="flex items-center space-x-2" href="{% url 'dashboard' %}">
+                <img src="{% static 'ehr_app\ehr-logo.png' %}" alt="EHR Logo" class="h-12 w-12 rounded-full border-2 border-blue-300"> 
+                <!-- Adjust height and width as needed -->
+                <span class="text-2xl font-bold text-gray-600 hover:text-gray-900">EHR Exchange Wall</span>
+            </a>
+        
+            <!-- Tabs on the Right
+            <div class="flex items-center space-x-10">
+                <a href="#seasonal_items" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900">Seasonal Items</a>
+                <a href="#items" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900">All Food Items</a>
+                <a href="#contact" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900">Contact</a>
+            </div> -->
+
+            <!-- Tabs on the Right - responsive -->
+            <div class="hidden md:flex items-center space-x-10">
+            <a href="{% url 'upload_ehr' %}" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900 border rounded-xl p-2 border-blue-500 border-2 hover:shadow-xl">Upload EHR</a>
+            <a href="{% url 'privacypolicy' %}" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900">Privacy Policy</a>
+            <a href="{% url 'support' %}" class="text-xl text-gray-600 font-bold hover:underline hover:text-gray-900">Support</a>
+            <a href="{% url 'user_logout' %}" class="text-xl text-green-600 font-bold hover:underline hover:text-green-900">{{ user.username|title }}<i class="fa-solid fa-right-from-bracket ml-2"></i>
+            </a>
+            </div>
+
+            <!-- Mobile Menu Toggle (Hamburger Icon) -->
+            <div class="md:hidden">
+                <button id="mobileMenuToggle" class="text-xl text-gray-600 hover:text-gray-900">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white py-2 px-4 shadow-md">
+                <a href="#software" class="block text-sm text-gray-600 font-bold hover:underline hover:text-gray-900">Upload EHR</a>
+                <a href="#hardware" class="block text-sm text-gray-600 font-bold hover:underline hover:text-gray-900">Privacy Policy</a>
+                <a href="#contact" class="block text-sm text-gray-600 font-bold hover:underline hover:text-gray-900">Support</a>
+            </div>
+
+            </nav>
+    </section>
+
+    <!-- content -->
+    <div>{% block content %}{% endblock %}</div>
+
+    {% block js %}{% endblock %}
+    
+
+    <script>
+        // JavaScript to toggle mobile menu visibility
+        document.getElementById('mobileMenuToggle').addEventListener('click', function () {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+    </script>
+    
+</body>
+</html>

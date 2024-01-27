@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    <!-- Include the Tailwind CSS link here -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .section {
+            display: none;
+        }
+
+        .active-section {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+<div class="container mx-auto my-8 p-8 bg-white shadow-md rounded-md">
+
+    <nav class="mb-4">
+        <button onclick="showSection('section1')" class="bg-blue-500 text-white py-2 px-4 rounded-md mr-2">Section 1</button>
+        <button onclick="showSection('section2')" class="bg-green-500 text-white py-2 px-4 rounded-md mr-2">Section 2</button>
+        <button onclick="showSection('section3')" class="bg-gray-500 text-white py-2 px-4 rounded-md">Section 3</button>
+    </nav>
+
+    <div id="section1" class="section active-section">
+        <h2 class="text-2xl font-bold mb-4">Section 1 Content</h2>
+        <p>This is the content for Section 1.</p>
+    </div>
+
+    <div id="section2" class="section">
+        <h2 class="text-2xl font-bold mb-4">Section 2 Content</h2>
+        <p>This is the content for Section 2.</p>
+    </div>
+
+    <div id="section3" class="section">
+        <h2 class="text-2xl font-bold mb-4">Section 3 Content</h2>
+        <p>This is the content for Section 3.</p>
+    </div>
+
+</div>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        var sections = document.querySelectorAll('.section');
+        sections.forEach(function(section) {
+            section.classList.remove('active-section');
+        });
+
+        // Show the selected section
+        var selectedSection = document.getElementById(sectionId);
+        selectedSection.classList.add('active-section');
+    }
+</script>
+
+</body>
+</html>

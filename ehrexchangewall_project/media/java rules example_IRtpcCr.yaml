@@ -1,0 +1,156 @@
+name: Vulnerabilities
+languages:
+  - java
+
+rules:
+  - id: sqlInjection
+    pattern: '\b(?:PreparedStatement|Statement|executeQuery|executeUpdate|execute)\s*\([^)]*\s*\+\s*".*"\s*\+\s*[^)]*\)'
+    message: Semgrep found potential SQL injection in Java code
+    languages:
+      - java
+    severity: WARNING
+    metadata:
+      category: security
+      cwe:
+        - "CWE 89: SQL Injection"
+      confidence: MEDIUM
+      likelihood: HIGH
+      impact: HIGH
+      owasp:
+        - A1:2021 Injection
+      source_rule_url: https://example.com
+    correctcode:
+      - 'PreparedStatement ps = connection.prepareStatement("SELECT * FROM users WHERE username = ? AND password = ?");'
+
+  - id: commandInjection
+    pattern: '\b(?:Runtime\.getRuntime\(\)\.exec|ProcessBuilder\.start\()\s*\([^)]*\s*\+\s*".*"\s*\+\s*[^)]*\)'
+    message: Semgrep found potential command injection in Java code
+    languages:
+      - java
+    severity: WARNING
+    metadata:
+      category: security
+      cwe:
+        - "CWE 77: Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      confidence: MEDIUM
+      likelihood: HIGH
+      impact: HIGH
+      owasp:
+        - A1:2021 Injection
+      source_rule_url: https://example.com
+    correctcode:
+      - 'ProcessBuilder pb = new ProcessBuilder("ls", "-l");'
+      
+  - id: ldapInjection
+    pattern: '\b(?:DirContext\.search)\s*\([^)]*\s*\+\s*".*"\s*\+\s*[^)]*\)'
+    message: Semgrep found potential LDAP injection in Java code
+    languages:
+      - java
+    severity: WARNING
+    metadata:
+      category: security
+      cwe:
+        - "CWE 90: Improper Neutralization of Special Elements used in an LDAP Query ('LDAP Injection')"
+      confidence: MEDIUM
+      likelihood: HIGH
+      impact: HIGH
+      owasp:
+        - A1:2021 Injection
+      source_rule_url: https://example.com
+    correctcode:
+      - 'DirContext ctx = new InitialDirContext();'
+      
+  - id: pathTraversal
+    pattern: '\b(?:File\.createNewFile|FileOutputStream|FileInputStream)\s*\(\s*".*\s*\+\s*".*"\s*\)'
+    message: Semgrep found potential path traversal in Java code
+    languages:
+      - java
+    severity: WARNING
+    metadata:
+      category: security
+      cwe:
+        - "CWE 22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      confidence: MEDIUM
+      likelihood: HIGH
+      impact: HIGH
+      owasp:
+        - A1:2021 Injection
+      source_rule_url: https://example.com
+    correctcode:
+      - 'FileOutputStream fos = new FileOutputStream("/path/to/directory/file.txt");'
+      
+  - id: xmlInjection
+    pattern: '\b(?:SAXParser|DocumentBuilderFactory\.newDocumentBuilder)\s*\(\s*\)\s*\.\w*\(\s*".*"\s*\+\s*[^)]*\)'
+    message: Semgrep found potential XML injection in Java code
+    languages:
+      - java
+    severity: WARNING
+    metadata:
+      category: security
+      cwe:
+        - "CWE 91: XML Injection (aka Blind XPath Injection)"
+      confidence: MEDIUM
+      likelihood: HIGH
+      impact: HIGH
+      owasp:
+        - A1:2021 Injection
+      source_rule_url: https://example.com
+    correctcode:
+      - 'DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();'
+      
+  - id: codeExecution
+    pattern: '\b(?:Runtime\.getRuntime\(\)\.exec|ProcessBuilder\.start\())\s*\(\s*".*"\s*\+\s*[^)]*\)'
+    message: Semgrep found potential code execution in Java code
+    languages:
+      - java
+    severity: WARNING
+    metadata:
+      category: security
+      cwe:
+        - "CWE 94: Improper Control of Generation of Code ('Code Injection')"
+      confidence: MEDIUM
+      likelihood: HIGH
+      impact: HIGH
+      owasp:
+        - A1:2021 Injection
+      source_rule_url: https://example.com
+    correctcode:
+      - 'ProcessBuilder pb = new ProcessBuilder("ls", "-l");'
+      
+  - id: deserialization
+    pattern: '\b(?:ObjectInputStream|readObject)\s*\(\s*[^)]*\s*\+\s*".*"\s*\)'
+    message: Semgrep found potential insecure deserialization in Java code
+    languages:
+      - java
+    severity: WARNING
+    metadata:
+      category: security
+      cwe:
+        - "CWE 502: Deserialization of Untrusted Data"
+      confidence: MEDIUM
+      likelihood: HIGH
+      impact: HIGH
+      owasp:
+        - A8:2021 Insecure Deserialization
+      source_rule_url: https://example.com
+    correctcode:
+      - 'ObjectInputStream ois = new ObjectInputStream(inputStream);'
+      
+  - id: fileUpload
+    pattern: '\b(?:FileItem|FileUpload)\s*\(\s*".*"\s*\+\s*[^)]*\)'
+    message: Semgrep found potential insecure file upload handling in Java code
+    languages:
+      - java
+    severity: WARNING
+    metadata:
+      category: security
+      cwe:
+        - "CWE 434: Unrestricted Upload of File with Dangerous Type"
+      confidence: MEDIUM
+      likelihood: HIGH
+      impact: HIGH
+      owasp:
+        - A4:2021 XML External Entity (XXE)
+      source_rule_url: https://example.com
+    correctcode:
+      - 'FileItem fileItem = new DiskFileItemFactory().createItem(fieldName, contentType, isFormField, fileName);'

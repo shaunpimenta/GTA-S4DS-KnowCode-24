@@ -1,0 +1,25 @@
+{% extends 'ehr_app/base.html' %} {% block title %}EHR Exchange Wall | Upload EHR{% endblock %}
+<div>{% block content %} {% load static %}</div>
+
+
+<div class="mt-20 pb-10">
+
+    {% if ehr_dataset %}
+
+    <div class="px-6 py-4 text-center">{{ ehr_dataset.name }}</div>
+    <div class="px-6 py-4 text-center">{{ ehr_dataset.category }}</div>
+    <div class="px-6 py-4 text-center">{{ ehr_dataset.license }}</div>
+    <div class="px-6 py-4 text-center">{{ ehr_dataset.file_type }}</div>
+    <div class="px-6 py-4 text-center">{{ ehr_dataset.file_size }}</div>
+    <div class="px-6 py-4 text-center">{{ ehr_dataset.downloads }}</div>
+    <div class="px-6 py-4 text-center">{{ ehr_dataset.usability }}</div>
+    <div class="px-6 py-4 text-center">{{ ehr_dataset.pub_date }}</div>
+    <div class="px-6 py-4 text-center">{{ ehr_dataset.desc }}</div>
+
+    {% else %}
+        <p>No EHR datasets available.</p>
+    {% endif %}
+
+</div>
+
+{% endblock %}

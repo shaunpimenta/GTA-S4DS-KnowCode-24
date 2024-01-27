@@ -1,0 +1,271 @@
+{% extends 'ehr_app/base.html' %} {% block title %}EHR Exchange Wall | Dashboard{% endblock %}
+<div>{% block content %} {% load static %}</div>
+
+
+<div class="m-4">
+
+        <!-- hero -->
+        <section class="mt-20 mx-20 px-5 py-4">
+
+            <div class="grid grid-cols-3 px-10 py-4">
+                <div class="col-span-2">
+                    <div class="text-3xl mb-10 font-bold text-blue-600">Electronic Health Record (EHR) Datasets</div>
+                    <p class="text-xl">"Unlock collaborative healthcare with our EHR Exchange Wall. Explore, analyze, and share data seamlessly on our website for a healthier future."</p>
+                </div>
+    
+                <div class="">
+                    <img src="{% static 'ehr_app\hero-img.svg' %}" alt="hero img" class="h-36 mx-auto"> 
+                </div>
+            </div>
+    
+            <div class="my-4">
+    
+                <form method="POST" onsubmit="showLoading()" class="my-2 p-4 border rounded-full shadow-md">
+                    
+                    <div class="grid grid-cols-6">
+    
+                        <input class="col-span-5" type="text" name="repo_link" id="repo_link" placeholder="Enter EHR Dataset Name" required>
+                        
+                        <input class="text-xl hover:underline hover:text-blue-500 text-gray-500 font-bold hover:cursor-pointer" type="submit" value="Search">
+    
+                    </div>
+    
+                </form>
+    
+                <div class="mt-10">
+                    <div class="text-xl font-bold"><i class="fa-solid fa-layer-group mr-2"></i>Categories</div>
+                    
+                    <div class="card-container py-4 text-center overflow-x-auto whitespace-nowrap overflow-x-hidden hover:overflow-x-auto">
+    
+    
+                        <a href="{% url 'all_ehr_datasets' %}" class="card inline-block p-2 rounded-full border shadow-md">
+                            <p>All EHR</p>
+                        </a>
+                        
+                        <a href="#" class="card inline-block p-2 rounded-full border shadow-md">
+                            <p>Clinical Observations</p>
+                        </a>
+                        
+                        <a href="#" class="card inline-block p-2 rounded-full border shadow-md">
+                            <p>Medical History</p>
+                        </a>
+    
+                        <a href="#" class="card inline-block p-2 rounded-full border shadow-md">
+                            <p>Medications</p>
+                        </a>
+                        
+                        <a href="#" class="card inline-block p-2 rounded-full border shadow-md">
+                            <p>Treatment Plans</p>
+                        </a>
+                        
+                        <a href="#" class="card inline-block p-2 rounded-full border shadow-md">
+                            <p>Immunization Records</p>
+                        </a>
+    
+                        <a href="#" class="card inline-block p-2 rounded-full border shadow-md">
+                            <p>Encounter Information</p>
+                        </a>
+                        
+                        <a href="#" class="card inline-block p-2 rounded-full border shadow-md">
+                            <p>Care Coordination</p>
+                        </a>
+                        
+                        <a href="#" class="card inline-block p-2 rounded-full border shadow-md">
+                            <p>Health Behavior Data</p>
+                        </a>
+    
+                        <a href="#" class="card inline-block p-2 rounded-full border shadow-md">
+                            <p>Healthcare Billing and Administrative Data</p>
+                        </a>
+    
+                    
+                        <!-- Add more cards as needed -->
+                    </div>
+    
+                </div>
+    
+            </div>
+        </section>
+    
+        <!-- Datasets -->
+        <section class="mx-20 px-5 py-4">
+            
+            <section class="mt-10 px-5 py-4">
+                <div class="text-xl font-bold"><i class="fa-solid fa-arrow-trend-up mr-2"></i>Trending EHR Dataset</div>
+                
+                <div class="grid grid-cols-4 gap-2 py-10">
+                    <a href="#" class="border p-4 shadow-sm rounded-sm hover:shadow-xl">
+                        <img src="{% static 'ehr_app\hero-img.svg' %}" alt="img" class="w-full h-auto object-cover">
+                        <hr>
+                        <div class="mt-4">
+                            <div class="">Heart Disease Dataset</div>
+                            <div class="text-sm text-gray-600">Usability : 9.2 - 10 MB</div>
+    
+                            
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-3  text-sm text-gray-600">File ( .csv )</div>
+                                <div class="text-sm text-gray-600text-center"><i class="fa-solid fa-download mr-2"></i>13</div>
+                            </div>
+    
+                        </div>
+                    </a>
+                    <div class="border p-4 shadow-sm rounded-sm hover:shadow-xl">
+                        <img src="{% static 'ehr_app\hero-img.svg' %}" alt="img">
+                        <hr>
+                        <div class="mt-4">
+                            <div class="">Heart Disease Dataset</div>
+                            <div class="text-sm text-gray-600">Usability : 9.2 - 10 MB</div>
+                            
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-3  text-sm text-gray-600">File ( .csv )</div>
+                                <div class="text-sm text-gray-600text-center"><i class="fa-solid fa-download mr-2"></i>13</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border p-4 shadow-sm rounded-sm hover:shadow-xl">
+                        <img src="{% static 'ehr_app\hero-img.svg' %}" alt="img">
+                        <hr>
+                        <div class="mt-4">
+                            <div class="">Heart Disease Dataset</div>
+                            <div class="text-sm text-gray-600">Usability : 9.2 - 10 MB</div>
+                            
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-3  text-sm text-gray-600">File ( .csv )</div>
+                                <div class="text-sm text-gray-600text-center"><i class="fa-solid fa-download mr-2"></i>13</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border p-4 shadow-sm rounded-sm hover:shadow-xl">
+                        <img src="{% static 'ehr_app\hero-img.svg' %}" alt="img">
+                        <hr>
+                        <div class="mt-4">
+                            <div class="">Heart Disease Dataset</div>
+                            <div class="text-sm text-gray-600">Usability : 9.2 - 10 MB</div>
+                            
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-3  text-sm text-gray-600">File ( .csv )</div>
+                                <div class="text-sm text-gray-600text-center"><i class="fa-solid fa-download mr-2"></i>13</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </section>
+            
+            <section class="mt-10 px-5 py-4  rounded-md">
+                <div class="text-xl font-bold"><i class="fa-solid fa-tag mr-2"></i>Recently Added EHR Dataset</div>
+    
+                <div class="grid grid-cols-4 gap-2 py-10">
+                    <div class="border p-4 shadow-sm rounded-sm hover:shadow-xl">
+                        <img src="{% static 'ehr_app\hero-img.svg' %}" alt="img">
+                        <hr>
+                        <div class="mt-4">
+                            <div class="">Heart Disease Dataset</div>
+                            <div class="text-sm text-gray-600">Usability : 9.2 - 10 MB</div>
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-3  text-sm text-gray-600">File ( .csv )</div>
+                                <div class="text-sm text-gray-600text-center"><i class="fa-solid fa-download mr-2"></i>13</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border p-4 shadow-sm rounded-sm hover:shadow-xl">
+                        <img src="{% static 'ehr_app\hero-img.svg' %}" alt="img">
+                        <hr>
+                        <div class="mt-4">
+                            <div class="">Heart Disease Dataset</div>
+                            <div class="text-sm text-gray-600">Usability : 9.2 - 10 MB</div>
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-3  text-sm text-gray-600">File ( .csv )</div>
+                                <div class="text-sm text-gray-600text-center"><i class="fa-solid fa-download mr-2"></i>13</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border p-4 shadow-sm rounded-sm hover:shadow-xl">
+                        <img src="{% static 'ehr_app\hero-img.svg' %}" alt="img">
+                        <hr>
+                        <div class="mt-4">
+                            <div class="">Heart Disease Dataset</div>
+                            <div class="text-sm text-gray-600">Usability : 9.2 - 10 MB</div>
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-3  text-sm text-gray-600">File ( .csv )</div>
+                                <div class="text-sm text-gray-600text-center"><i class="fa-solid fa-download mr-2"></i>13</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border p-4 shadow-sm rounded-sm hover:shadow-xl">
+                        <img src="{% static 'ehr_app\hero-img.svg' %}" alt="img">
+                        <hr>
+                        <div class="mt-4">
+                            <div class="">Heart Disease Dataset</div>
+                            <div class="text-sm text-gray-600">Usability : 9.2 - 10 MB</div>
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-3  text-sm text-gray-600">File ( .csv )</div>
+                                <div class="text-sm text-gray-600text-center"><i class="fa-solid fa-download mr-2"></i>13</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="mt-10 px-5 py-4  rounded-md">
+                <div class="text-xl font-bold"><i class="fa-solid fa-clock-rotate-left mr-2"></i>Recently Viewed EHR Dataset</div>
+    
+                <div class="grid grid-cols-4 gap-2 py-10">
+                    <div class="border p-4 shadow-sm rounded-sm hover:shadow-xl">
+                        <img src="{% static 'ehr_app\hero-img.svg' %}" alt="img">
+                        <hr>
+                        <div class="mt-4">
+                            <div class="">Heart Disease Dataset</div>
+                            <div class="text-sm text-gray-600">Usability : 9.2 - 10 MB</div>
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-3  text-sm text-gray-600">File ( .csv )</div>
+                                <div class="text-sm text-gray-600text-center"><i class="fa-solid fa-download mr-2"></i>13</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border p-4 shadow-sm rounded-sm hover:shadow-xl">
+                        <img src="{% static 'ehr_app\hero-img.svg' %}" alt="img">
+                        <hr>
+                        <div class="mt-4">
+                            <div class="">Heart Disease Dataset</div>
+                            <div class="text-sm text-gray-600">Usability : 9.2 - 10 MB</div>
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-3  text-sm text-gray-600">File ( .csv )</div>
+                                <div class="text-sm text-gray-600text-center"><i class="fa-solid fa-download mr-2"></i>13</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border p-4 shadow-sm rounded-sm hover:shadow-xl">
+                        <img src="{% static 'ehr_app\hero-img.svg' %}" alt="img">
+                        <hr>
+                        <div class="mt-4">
+                            <div class="">Heart Disease Dataset</div>
+                            <div class="text-sm text-gray-600">Usability : 9.2 - 10 MB</div>
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-3  text-sm text-gray-600">File ( .csv )</div>
+                                <div class="text-sm text-gray-600text-center"><i class="fa-solid fa-download mr-2"></i>13</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border p-4 shadow-sm rounded-sm hover:shadow-xl">
+                        <img src="{% static 'ehr_app\hero-img.svg' %}" alt="img">
+                        <hr>
+                        <div class="mt-4">
+                            <div class="">Heart Disease Dataset</div>
+                            <div class="text-sm text-gray-600">Usability : 9.2 - 10 MB</div>
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-3  text-sm text-gray-600">File ( .csv )</div>
+                                <div class="text-sm text-gray-600text-center"><i class="fa-solid fa-download mr-2"></i>13</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </section>
+            
+        </section>
+        
+
+</div>
+
+{% endblock %}

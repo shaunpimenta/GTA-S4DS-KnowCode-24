@@ -1,0 +1,107 @@
+{% extends 'ehr_app/base.html' %} {% block title %}EHR Exchange Wall | Upload EHR{% endblock %}
+<div>{% block content %} {% load static %}</div>
+
+
+<div class="mt-20 pb-10">
+
+        <!-- Header -->
+        <div class="text-center text-2xl font-bold mt-10 text-blue-600">
+            Upload Electronic Health Record (EHR) Datasets
+        </div>
+    
+        <!-- form  -->
+        <section class="mx-10 p-4 border rounded-md mt-10 shadow-md">
+            <!-- <form method="POST" class="my-2 p-4" enctype="multipart/form-data"> -->
+            <form method="POST" action="{% url 'upload_files' %}" class="my-2 p-4" enctype="multipart/form-data">
+                {% csrf_token %}
+
+    
+                <div class="">
+            
+                    <!-- EHR Dataset Name -->
+                    <div class="mt-4">
+                        <label for="ehr_dataset_name" class="block text-sm font-medium text-gray-700">EHR Dataset Name</label>
+                        <input type="text" name="ehr_dataset_name" id="ehr_dataset_name" placeholder="Enter EHR Dataset Name" required
+                            class="mt-1 p-2 block w-full border rounded-md">
+                    </div>
+            
+                    <!-- Upload File -->
+                    <div class="mt-4">
+                        <label for="upload_file" class="block text-sm font-medium text-gray-700">Upload File</label>
+                        <input type="file" name="upload_file" id="upload_file" accept=".csv, .json, .yaml" required
+                            class="mt-1 p-2 block w-full border rounded-md">
+                        <p class="text-xs text-gray-500">Allowed file types: .csv, .json, .yaml | Max file size: 100 MB</p>
+                    </div>
+
+                    <!-- EHR Dataset size -->
+                    <div class="mt-4">
+                        <label for="ehr_dataset_size" class="block text-sm font-medium text-gray-700">EHR Dataset Size</label>
+                        <input type="text" name="ehr_dataset_size" id="ehr_dataset_size" placeholder="Enter EHR Dataset Size eg: 5.05 KB , 10 MB" required
+                            class="mt-1 p-2 block w-full border rounded-md">
+                    </div>
+
+                    <!-- EHR Dataset type -->
+                    <div class="mt-4">
+                        <label for="ehr_dataset_type" class="block text-sm font-medium text-gray-700">EHR Dataset Type</label>
+                        <input type="text" name="ehr_dataset_type" id="ehr_dataset_type" placeholder="Enter EHR Dataset Type eg: csv, json, yaml" required
+                            class="mt-1 p-2 block w-full border rounded-md">
+                    </div>
+
+                    
+                    <!-- Describe Dataset -->
+                    <div class="mt-4">
+                        <label for="dataset_description" class="block text-sm font-medium text-gray-700">Describe Dataset</label>
+                        <textarea name="dataset_description" id="dataset_description" placeholder="Describe the dataset"
+                        class="mt-1 p-2 block w-full border rounded-md"></textarea>
+                    </div>
+
+                    <!-- Upload Thumbnail -->
+                    <div class="mt-4">
+                        <label for="upload_image" class="block text-sm font-medium text-gray-700">Upload Thumbnail</label>
+                        <input type="file" name="upload_image" id="upload_image" accept=".png, .jpeg, .jpg" required
+                            class="mt-1 p-2 block w-full border rounded-md">
+                        <p class="text-xs text-gray-500">Allowed file types: .png, .jpeg, .jpg | Max image size: 100 MB</p>
+                    </div>
+                    
+                    <!-- Select Category -->
+                    <div class="mt-4">
+                        <label for="category" class="block text-sm font-medium text-gray-700">Select Category for the Dataset</label>
+                        <select name="category" id="category" class="mt-1 p-2 block w-full border rounded-md">
+                            <!-- Add your category options here -->
+                            <option value="category1">Category 1</option>
+                            <option value="category2">Category 2</option>
+                            <option value="category3">Category 3</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Select License -->
+                    <div class="mt-4">
+                        <label for="license" class="block text-sm font-medium text-gray-700">Select License for the Dataset</label>
+                        <select name="license" id="license" class="mt-1 p-2 block w-full border rounded-md">
+                            <!-- Add your category options here -->
+                            <option value="license1">License 1</option>
+                            <option value="license2">License 2</option>
+                            <option value="license3">License 3</option>
+                        </select>
+                    </div>
+    
+            
+                    <!-- Submit Button -->
+                    <div class="mt-4 text-center">
+                        <input type="submit" value="Submit"
+                            class="text-xl hover:underline hover:text-blue-500 text-gray-500 font-bold hover:cursor-pointer p-2 border border-2 border-gray-500 rounded-xl hover:bg-blue-100">
+                    </div>
+            
+                </div>
+            
+            </form>
+            
+        </section>
+
+</div>
+
+{% endblock %}
+
+
+
+
