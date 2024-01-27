@@ -2,7 +2,9 @@
 Team : GTA , Project : HealthyBand  - S4DS-KnowCode Hackathon : kjsieit College
 
 
-# Idea of Product : HealthyBand
+# Abstract: ( Before Project Day )
+
+## Idea of Product : HealthyBand
 
 its wearable, light weight and less costly... 
 
@@ -35,7 +37,43 @@ its actions:
 - this information can be made avaliable to doctors and medical institutes if the user consensts for diagnosis and or research purposes
 
 
-## About Our Project:
+# At Project Day:
+
+### Rough Idea:
+
+Idea is Product name : HealthyBand
+
+its wearable, light weight and less costly... 
+
+which has sensors like:
+- Heart Pulse Sensor
+- Pulse Oximeter Heart Rate sensor
+- MPU6050 : Gyro Scopic Sensor : for body movement , sleep mode detection, etc
+
+extra hardware:
+- ESP32 : IoT Board
+- Battery Li-ion 3.7V, 2500 mH
+- 3 push to ON buttons
+- Oled : 1.3 Inch , 128x64 Size
+
+for this prototype product we will cover our product for good product interface  
+
+its actions:
+- measure the sensor data then upload on Django Server 
+    (in encrypted form)
+- also does edge computing
+- display the sensor readings on Oled
+- if any health parameter is above threshold level (means in alert range)
+    then make a alert notifiaction to the docter appointed (if that doctor is busy then next doctor which has less schedules and the nearest
+- it gives notification for mediaction which medicine with QTY and time
+- tracking daily activity : (suggest some use of this feature)
+- sleep tracking and sleep time notification
+- remote patient monitoring
+- every data will be stored on server in encrypted form and can be visiable on iteractive dashboard for real time insights 
+- make some prediction on the data collected and giving recommendation on it or any prediction on it.
+
+
+### About Our Project:
 
 - Our team has dedicated to developing a fitness band that goes beyond the conventional, seamlessly integrating advanced technology to empower you on your fitness journey.
 
@@ -47,52 +85,116 @@ its actions:
 
 
 ## Features:
+	- Heart Rate- Pulse Sensor
+	- Gyroscope- To measure angular velocity, movement and Orientation
+	- Accelerometer- Inertial measurements of velocity and position
+	- Walking Mode
+	- Running Mode
+	- Different Sports mode- Model has been trained but testing in Not completed
+	- Smart Phone Notification
+
+	Advanced Biometric Monitoring:
+		- Real-time heart rate monitoring to gauge your cardiovascular health.
+	Smart Activity Recognition:
+		- Automatic detection and categorization of various activities, from running and cycling to yoga and weightlifting.
+	Personalized Health Insights:
+		- Tailored recommendations based on your activity levels, sleep patterns, and overall health metrics.
 
 ## Future Scope:
-- Stress Level Measurement 
-- Sleep Tracking
-- Make an Robust Application
-- and to help you manage the demands of daily life.
-
-Advanced Biometric Monitoring:
-
-	- Real-time heart rate monitoring to gauge your cardiovascular health.
-
-
-Smart Activity Recognition:
-
-	- Automatic detection and categorization of various activities, from running and cycling to yoga and weightlifting.
-
-Personalized Health Insights:
-
-	- Tailored recommendations based on your activity levels, sleep patterns, and overall health metrics.
+	- Stress Level Measurement 
+	- Sleep Tracking
+	- Make an Robust Application
+	- Calories Burn Tracking
+	- SOS signal
+	- and to help you manage the demands of daily life.
 
 # Output:
 
 
 
 ### Our Logo
-<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="100">
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo-1.png" alt="Image 1" height="100">
 
 ### Band SensorData Web-App - Welcome Page
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/sensorData%20website%20welcome%20page.jpeg" alt="Image 1" height="250">
 
-
 ### Band SensorData Web-App - Data Logs Page
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/SensorData-logs.jpeg" alt="Image 1" height="250">
 
-
 ### Band SensorData Web-App - Get Latest Sensor Data Api
-<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/get%20latest%20sensor%20data%20api.jpeg" alt="Image 1" height="250">
 
-### Band SensorData Web-App - Hand Band Simulation
-<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
+### Band SensorData Web-App - Hand Band Simulation :: link : https://wokwi.com/projects/387899744400957441
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/band%20simulation-wokwi.jpeg" alt="Image 1" height="250">
 
-### Band SensorData Web-App - Welcome Page
-<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
+### Band SensorData Web-App - Hand Band Hardware Implemented 
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/hardware%20implemented.jpeg" alt="Image 1" height="250">
 
-### Band SensorData Web-App - Welcome Page
-<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
+### Band SensorData Web-App - Hand Band Hardware Implemented - working mode
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/hardware%20implemented%20-%20working%20mode.jpeg" alt="Image 1" height="250">
+
+### Band SensorData Web-App - Hand Band Hardware Connection - 1
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/hardware-connection%20(1).jpeg" alt="Image 1" height="250">
+
+### Band SensorData Web-App - Hand Band Hardware Connection - 2
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/hardware-connection%20(2).jpeg" alt="Image 1" height="250">
+
+
+
+
+
+### Band Mobile-App - Register
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/band%20app%20-%20register.jpeg" alt="Image 1" height="250">
+
+### Band Mobile-App - Login
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/band%20app%20-%20login.jpeg" alt="Image 1" height="250">
+
+### Band Mobile-App - Dashboard
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/dashboard.jpeg" alt="Image 1" height="250">
+
+### Band Mobile-App - Recommended Product
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/recommended%20product.jpeg" alt="Image 1" height="250">
+
+### Band Mobile-App - Alert Notification
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/alert.jpeg" alt="Image 1" height="250">
+
+### Band Mobile-App - Help Section (SOS)
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/help%20section.jpeg" alt="Image 1" height="250">
+
+
+# EHR Exchange Wall
+
+Unlock collaborative healthcare with our EHR Exchange Wall. Explore, analyze, and share data seamlessly on our website for a healthier future.
+
+- its basically a Electronic Health Record data exchange platform
+
+
+### EHR exchange wall - Welcome Page
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/EHR%20exchange%20wall%20-%20welcome.jpeg" alt="Image 1" height="250">
+
+### EHR exchange wall - Dashboard Page
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/EHR%20exchange%20wall%20-%20dashboard.jpeg" alt="Image 1" height="250">
+
+### EHR exchange wall - Trending Datasets
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/EHR%20exchange%20wall%20-%20trending%20datasets.jpeg" alt="Image 1" height="250">
+
+### EHR exchange wall - Recent Dataset
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/EHR%20exchange%20wall%20-%20recent%20dataset.jpeg" alt="Image 1" height="250">
+
+### EHR exchange wall - Recently Viewed
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/EHR%20exchange%20wall%20-%20recently%20viewed.jpeg" alt="Image 1" height="250">
+
+### EHR exchange wall - Dataset Upload Page
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/EHR%20exchange%20wall%20-%20dataset%20upload%20page.jpeg" alt="Image 1" height="250">
+
+### EHR exchange wall - Privacy Policy Page
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/EHR%20exchange%20wall%20-%20privacy%20policy.jpeg" alt="Image 1" height="250">
+
+### EHR exchange wall - Support Page
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/EHR%20exchange%20wall%20-%20support.jpeg" alt="Image 1" height="250">
+
+
+
 
 
 
