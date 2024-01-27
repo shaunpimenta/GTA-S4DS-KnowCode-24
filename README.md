@@ -85,25 +85,28 @@ its actions:
 
 
 ## Features:
+	- Heart Rate- Pulse Sensor
+	- Gyroscope- To measure angular velocity, movement and Orientation
+	- Accelerometer- Inertial measurements of velocity and position
+	- Walking Mode
+	- Running Mode
+	- Different Sports mode- Model has been trained but testing in Not completed
+	- Smart Phone Notification
+
+	Advanced Biometric Monitoring:
+		- Real-time heart rate monitoring to gauge your cardiovascular health.
+	Smart Activity Recognition:
+		- Automatic detection and categorization of various activities, from running and cycling to yoga and weightlifting.
+	Personalized Health Insights:
+		- Tailored recommendations based on your activity levels, sleep patterns, and overall health metrics.
 
 ## Future Scope:
-- Stress Level Measurement 
-- Sleep Tracking
-- Make an Robust Application
-- and to help you manage the demands of daily life.
-
-Advanced Biometric Monitoring:
-
-	- Real-time heart rate monitoring to gauge your cardiovascular health.
-
-
-Smart Activity Recognition:
-
-	- Automatic detection and categorization of various activities, from running and cycling to yoga and weightlifting.
-
-Personalized Health Insights:
-
-	- Tailored recommendations based on your activity levels, sleep patterns, and overall health metrics.
+	- Stress Level Measurement 
+	- Sleep Tracking
+	- Make an Robust Application
+	- Calories Burn Tracking
+	- SOS signal
+	- and to help you manage the demands of daily life.
 
 # Output:
 
