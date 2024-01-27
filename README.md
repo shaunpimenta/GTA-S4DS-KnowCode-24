@@ -113,7 +113,7 @@ its actions:
 
 
 ### Our Logo
-<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="100">
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo-1.png" alt="Image 1" height="100">
 
 ### Band SensorData Web-App - Welcome Page
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/sensorData%20website%20welcome%20page.jpeg" alt="Image 1" height="250">
