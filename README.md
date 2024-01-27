@@ -77,22 +77,62 @@ Personalized Health Insights:
 ### Band SensorData Web-App - Welcome Page
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/sensorData%20website%20welcome%20page.jpeg" alt="Image 1" height="250">
 
-
 ### Band SensorData Web-App - Data Logs Page
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/SensorData-logs.jpeg" alt="Image 1" height="250">
 
-
 ### Band SensorData Web-App - Get Latest Sensor Data Api
-<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/get%20latest%20sensor%20data%20api.jpeg" alt="Image 1" height="250">
 
 ### Band SensorData Web-App - Hand Band Simulation
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/band%20simulation-wokwi.jpeg" alt="Image 1" height="250">
+
+
+
+
+
+### Band Mobile-App - Welcome Page
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
 
-### Band SensorData Web-App - Welcome Page
+### Band Mobile-App - Register Page
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
 
-### Band SensorData Web-App - Welcome Page
+### Band Mobile-App - Login Page
 <img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/logo.png" alt="Image 1" height="250">
+
+
+# EHR Exchange Wall
+
+Unlock collaborative healthcare with our EHR Exchange Wall. Explore, analyze, and share data seamlessly on our website for a healthier future.
+
+- its basically a Electronic Health Record data exchange platform
+
+
+### EHR exchange wall - Welcome Page
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/EHR%20exchange%20wall%20-%20welcome.jpeg" alt="Image 1" height="250">
+
+### EHR exchange wall - Dashboard Page
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/EHR%20exchange%20wall%20-%20dashboard.jpeg" alt="Image 1" height="250">
+
+### EHR exchange wall - Trending Datasets
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/EHR%20exchange%20wall%20-%20trending%20datasets.jpeg" alt="Image 1" height="250">
+
+### EHR exchange wall - Recent Dataset
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/EHR%20exchange%20wall%20-%20recent%20dataset.jpeg" alt="Image 1" height="250">
+
+### EHR exchange wall - Recently Viewed
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/EHR%20exchange%20wall%20-%20recently%20viewed.jpeg" alt="Image 1" height="250">
+
+### EHR exchange wall - Dataset Upload Page
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/EHR%20exchange%20wall%20-%20dataset%20upload%20page.jpeg" alt="Image 1" height="250">
+
+### EHR exchange wall - Privacy Policy Page
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/EHR%20exchange%20wall%20-%20privacy%20policy.jpeg" alt="Image 1" height="250">
+
+### EHR exchange wall - Support Page
+<img src="https://github.com/AtharvaPawar456/GTA-S4DS-KnowCode-24/blob/main/Project%20Output%20Images/EHR%20exchange%20wall%20-%20support.jpeg" alt="Image 1" height="250">
+
+
+
 
 
 
