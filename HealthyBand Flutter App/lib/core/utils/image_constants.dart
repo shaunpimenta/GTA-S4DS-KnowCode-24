@@ -7,7 +7,7 @@ class ImageConstant {
   static String imgMaleAvatar = "assets/images/male.png";
   static String imgFemaleAvatar = "assets/images/female.png";
   static String imgHealthify = "assets/images/healthifyy.png";
-  static String walking = "assets/images/recommendations/walking.jpg";
+  static String walking = "assets/images/walking.jpg";
 
   static String iconHomeLight =
       "assets/images/navigation_bar_images/home_icon_light.png";

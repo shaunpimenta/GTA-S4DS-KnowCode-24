@@ -140,7 +140,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: AppStyle.txtPoppinsSemiBold28Light,
               ),
               Text(
-                "${user.fullName}",
+                // "${user.fullName}",
+                "Atharva Pawar",
                 style: AppStyle.txtPoppinsBold28Dark,
               ),
               _dailyActivityNotification(
@@ -193,10 +194,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 HealthCornerCard(
                   onTap: () {},
-                  imagePath: ImageConstant.walking,
-                  description: "Walking Shoes",
-                  company: "Adidas",
-                  price: "4999",
+                  imagePath: "assets/images/shirt.png",
+                  description: "Aesthetic Nation Gym Tshirt",
+                  company: "Aesthetic Nation",
+                  price: "499",
                 ),
                 HealthCornerCard(
                   onTap: () {},
@@ -416,7 +417,8 @@ class _DailyActivityRatingState extends State<DailyActivityRating> {
               ),
               title: "heartRate".tr,
               measure: "bpm".tr,
-              rating: widget.heartRating,
+              // rating: widget.heartRating,
+              rating: 82,
             ),
             RatingShowCaseCard(
               cardColor: ColorConstant.pupuleColor,
